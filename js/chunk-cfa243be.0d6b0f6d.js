@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-cfa243be"],{"45c1":function(n,e,t){"use strict";t.r(e);var c=function(){var n=this,e=n.$createElement;n._self._c;return n._m(0)},a=[function(){var n=this,e=n.$createElement,t=n._self._c||e;return t("div",[t("div",[n._v("动画")])])}],i={name:"animation"},u=i,r=(t("7544"),t("2877")),s=Object(r["a"])(u,c,a,!1,null,"018b32bd",null);e["default"]=s.exports},7544:function(n,e,t){"use strict";t("8a51")},"8a51":function(n,e,t){}}]);
+//# sourceMappingURL=chunk-cfa243be.0d6b0f6d.js.map

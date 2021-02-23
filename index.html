@@ -1,0 +1,45 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><title>yinkn's page</title><link rel=icon href=/favicon.ico><script>(function(){
+      var redirect = sessionStorage.redirect;
+      delete sessionStorage.redirect;
+      if (redirect && redirect != location.href) {
+        history.replaceState(null, null, redirect);
+      }
+    })();
+
+    var calcRootFontSize = function() {
+      var whdef = 100 / 1920;// 表示1920的设计图,使用100PX的默认值
+      var wW = window.innerWidth;// 当前窗口的宽度
+      var rem = Math.floor(wW * whdef);// 以默认比例值乘以当前窗口宽度,得到该宽度下的相应FONT-SIZE值
+      var html = document.getElementsByTagName('html')[0];
+      html.style['font-size'] = rem + "px";
+    }
+
+    calcRootFontSize();
+
+    (function() {
+      var throttle = function(type, name, obj) {
+          obj = obj || window;
+          var running = false;
+          var func = function() {
+              if (running) { return; }
+              running = true;
+              requestAnimationFrame(function() {
+                  obj.dispatchEvent(new CustomEvent(name));
+                  running = false;
+              });
+          };
+          obj.addEventListener(type, func);
+      };
+
+      /* init - you can init any event */
+      throttle("resize", "optimizedResize");
+    })();
+
+    // handle event
+    window.addEventListener("optimizedResize", calcRootFontSize);</script><link href=/css/chunk-0e685280.eee03426.css rel=prefetch><link href=/css/chunk-17cc8536.6148a93c.css rel=prefetch><link href=/css/chunk-352c4a04.784ff9c6.css rel=prefetch><link href=/css/chunk-390e9ddd.1d7f45ef.css rel=prefetch><link href=/css/chunk-5be5c3c8.c0a586ef.css rel=prefetch><link href=/css/chunk-62b9ed4d.63e7d1a8.css rel=prefetch><link href=/css/chunk-77ece767.7419d82b.css rel=prefetch><link href=/css/chunk-7cdec406.cad1674c.css rel=prefetch><link href=/css/chunk-cfa243be.61dc0c75.css rel=prefetch><link href=/css/chunk-f5fea15c.b2154110.css rel=prefetch><link href=/js/chunk-0e685280.fdf95263.js rel=prefetch><link href=/js/chunk-17cc8536.7760cc89.js rel=prefetch><link href=/js/chunk-2d0aeadc.5c4c1f1d.js rel=prefetch><link href=/js/chunk-2d0c5386.4d6b9e0d.js rel=prefetch><link href=/js/chunk-2d217669.7bc671d1.js rel=prefetch><link href=/js/chunk-352c4a04.df99fb67.js rel=prefetch><link href=/js/chunk-390e9ddd.9eb1774e.js rel=prefetch><link href=/js/chunk-5be5c3c8.d834a506.js rel=prefetch><link href=/js/chunk-62b9ed4d.d6e55dd4.js rel=prefetch><link href=/js/chunk-77ece767.b893ad45.js rel=prefetch><link href=/js/chunk-7cdec406.0ab77dda.js rel=prefetch><link href=/js/chunk-cfa243be.0d6b0f6d.js rel=prefetch><link href=/js/chunk-f5fea15c.f30c49a3.js rel=prefetch><link href=/css/index.0aedb744.css rel=preload as=style><link href=/js/chunk-vendors.fad4a8b1.js rel=preload as=script><link href=/js/index.cf6bd287.js rel=preload as=script><link href=/css/index.0aedb744.css rel=stylesheet></head><body><div id=app></div><script src=/js/chunk-vendors.fad4a8b1.js></script><script src=/js/index.cf6bd287.js></script></body><style type=text/css>html {
+    font-size: 100px;
+  }
+  body {
+    font-size: 16px;
+    margin: 0;
+  }</style></html>
